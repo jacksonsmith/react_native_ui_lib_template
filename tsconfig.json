@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "module": "ES2015",
+      "outDir": "dist",
+      "lib": ["es6"],
+      "declaration": true,
+      "esModuleInterop": true,
+      "declarationDir": "dist",
+      "allowJs": true,
+      "skipLibCheck": true,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "noEmit": false,
+      "jsx": "react"
+    },
+    "include": [
+      "src"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "**/*.stories.*",
+        "**/*.test.*"
+    ]
+  }
