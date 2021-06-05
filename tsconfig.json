@@ -21,6 +21,7 @@
       "src"
     ],
     "exclude": [
+        "SampleApp",
         "node_modules",
         "dist",
         "**/*.stories.*",
