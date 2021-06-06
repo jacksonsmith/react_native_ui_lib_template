@@ -12,7 +12,7 @@
     "build-storybook": "build-storybook",
     "build": "tsc && yarn copy-files",
     "prepublishOnly": "yarn build",
-    "copy-files": "copyfiles -u 1 src/**/*.css src/**/*.json dist"
+    "copy-files": "copyfiles -u 1 src/**/*.json dist"
   },
   "np": {
     "publish": false,
@@ -20,8 +20,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
-    "@rollup/plugin-commonjs": "^19.0.0",
-    "@rollup/plugin-node-resolve": "^13.0.0",
     "@storybook/addon-actions": "^6.1.9",
     "@storybook/addon-essentials": "^6.1.9",
     "@storybook/addon-links": "^6.1.9",
@@ -34,11 +32,6 @@
     "postcss": "^8.3.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
-    "rollup": "^2.50.6",
-    "rollup-plugin-json": "^4.0.0",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-postcss": "^4.0.0",
-    "rollup-plugin-typescript2": "^0.30.0",
     "typescript": "^4.2.4"
   },
   "peerDependencies": {
