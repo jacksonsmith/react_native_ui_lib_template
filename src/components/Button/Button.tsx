@@ -1,43 +1,45 @@
-import React from "react";
+import React from 'react';
+import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 
-export interface ButtonProps  {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean;
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string;
-  /**
-   * How large should the button be?
-   */
-  size?: "small" | "medium" | "large";
-  /**
-   * Button contents
-   */
-  label: string;
-  /**
-   * Optional click handler
-   */
-  onClick?: (
-    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) => void;
-};
+import colors from '../Colors';
 
-/**
- * Primary UI component for user interaction
- */
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: colors.primary,
+    paddingVertical: 14,
+    borderRadius: 6,
+    borderWidth: 1,
+    borderColor: colors.primary,
+    marginVertical: 7,
+  },
+  containerOutline: {
+    backgroundColor: 'transparent',
+    borderColor: colors.border,
+  },
+
+  text: {
+    color: colors.white,
+    alignSelf: 'center',
+    fontSize: 18,
+    fontWeight: '500',
+  },
+  textOutline: {
+    color: colors.primary,
+  },
+});
+
 const Button = ({
-  onClick,
-  label,
-}: ButtonProps) => {
+                         onPress = () => {},
+                         children = '',
+                         outline = false,
+                       }) => {
+  const containerStyles = [styles.container];
+  const textStyles = [styles.text];
+
   return (
-    <button
-      type="button"
-      onClick={onClick}>
-      {label}
-    </button>
+      <TouchableOpacity onPress={onPress} style={containerStyles}>
+        <Text style={textStyles}>{children}</Text>
+      </TouchableOpacity>
   );
 };
 

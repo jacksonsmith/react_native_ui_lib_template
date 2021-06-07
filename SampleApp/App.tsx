@@ -14,21 +14,12 @@ import {
   StyleSheet,
   ScrollView,
   View,
-  Text,
   StatusBar,
 } from 'react-native';
 
 import {Accordion, Button} from 'library';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-declare var global: {HermesInternal: null | {}};
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 const App = () => {
   return (
@@ -38,42 +29,11 @@ const App = () => {
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={stylesHome.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={stylesHome.engine}>
-              <Text style={stylesHome.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={stylesHome.body}>
-            <View style={stylesHome.sectionContainer}>
-              <Text style={stylesHome.sectionTitle}>Step One</Text>
-              <Text style={stylesHome.sectionDescription}>
-                Edit <Text style={stylesHome.highlight}>App.tsx</Text> to change
-                this screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={stylesHome.sectionContainer}>
-              <Text style={stylesHome.sectionTitle}>See Your Changes</Text>
-              <Text style={stylesHome.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={stylesHome.sectionContainer}>
-              <Text style={stylesHome.sectionTitle}>Debug</Text>
-              <Text style={stylesHome.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={stylesHome.sectionContainer}>
-              <Text style={stylesHome.sectionTitle}>Learn More</Text>
-              <Text style={stylesHome.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
           <View>
             <Accordion />
+          </View>
+          <View>
+            <Button> Teste de Componente Button </Button>
           </View>
         </ScrollView>
       </SafeAreaView>
